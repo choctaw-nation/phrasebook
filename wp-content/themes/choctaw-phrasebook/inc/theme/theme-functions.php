@@ -95,7 +95,7 @@ add_filter(
 	function ( $data, $file, $filename, $mimes ) {
 
 		global $wp_version;
-		if ( $wp_version !== '4.7.1' ) {
+		if ( '4.7.1' !== $wp_version ) {
 			return $data;
 		}
 
@@ -111,13 +111,24 @@ add_filter(
 	4
 );
 
-function cc_mime_types( $mimes ) {
+/**
+ * Add SVG to allowed mime types
+ *
+ * @param array $mimes Mime types.
+ * @return array
+ */
+function cno_cc_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
 }
-	add_filter( 'upload_mimes', 'cc_mime_types' );
+add_filter( 'upload_mimes', 'cno_cc_mime_types' );
 
-function fix_svg() {
+/**
+ * Fix SVG display in media library
+ *
+ * @return void
+ */
+function cno_fix_svg() {
 	echo '<style type="text/css">
 		  .attachment-266x266, .thumbnail img {
 			   width: 100% !important;
@@ -125,4 +136,4 @@ function fix_svg() {
 		  }
 		  </style>';
 }
-	add_action( 'admin_head', 'fix_svg' );
+add_action( 'admin_head', 'cno_fix_svg' );

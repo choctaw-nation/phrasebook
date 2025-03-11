@@ -6,9 +6,10 @@
  * @since 2.0.0
  */
 
+ // phpcs:disable WordPress.Security.NonceVerification.Recommended
+
 // Check if the '_sft_phrases-category' parameter exists in the URL
 if ( isset( $_GET['_sft_phrases-category'] ) && ! empty( $_GET['_sft_phrases-category'] ) ) {
-
 	$search_term        = ! empty( $_GET['_sf_s'] ) ? $_GET['_sf_s'] : null;
 	$first_letter_slug  = $_GET['_sft_phrases-category'];
 	$first_letter_term  = get_term_by( 'slug', $first_letter_slug, 'phrases-category' );
@@ -21,8 +22,8 @@ if ( isset( $_GET['_sft_phrases-category'] ) && ! empty( $_GET['_sft_phrases-cat
 	);
 
 	if ( ! is_wp_error( $terms ) && ! empty( $terms ) ) {
-		foreach ( $terms as $term ) {
-			$first_letter_array[] = $term->name;
+		foreach ( $terms as $search_term ) {
+			$first_letter_array[] = $search_term->name;
 		}
 	}
 
@@ -31,13 +32,15 @@ if ( isset( $_GET['_sft_phrases-category'] ) && ! empty( $_GET['_sft_phrases-cat
 
 } else {
 	// No '_sft_phrases-category' parameter, set default values
-	$search_term  = ! empty( $_GET['_sf_s'] ) ? $_GET['_sf_s'] : null;
+	$search_term = ! empty( $_GET['_sf_s'] ) ? $_GET['_sf_s'] : null;
+
 	$first_letter = 'All';
 
 	// Get the entire post count for the custom post type (replace 'your-cpt' with actual CPT)
 	$post_count        = wp_count_posts( 'phrases' );
 	$first_letter_term = null; // No specific term, so we won't use this
 }
+
 
 ?>
 <header class="container">

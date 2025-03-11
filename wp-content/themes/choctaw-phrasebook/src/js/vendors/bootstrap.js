@@ -4,5 +4,5 @@
  */
 import '../../styles/vendors/bootstrap.scss';
 import 'bootstrap/js/dist/dropdown';
-import Modal from 'bootstrap/js/dist/modal';
-import Offcanvas from 'bootstrap/js/dist/offcanvas';
+import 'bootstrap/js/dist/modal';
+import 'bootstrap/js/dist/offcanvas';

@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+:root {
+	--font-headings: #{v.$font-headings};
+	--font-body: #{v.$font-body};
+	--font-serif: #{v.$font-serif};
+
+	--color-primary: #{v.$color-primary};
+	--color-primary--light: #{v.$color-primary--light};
+
+	--color-grey--light: #{v.$color-grey--light};
+
+	--transition--standard: #{v.$transition--standard};
+}
+
+body {
+	@include m.color-mode(dark) {
+		background-color: var(--bs-black);
+	}
+}
+
+::selection {
+	color: #fff;
+	text-shadow: none;
+	background-color: var(--bs-primary);
+}

@@ -1,0 +1,91 @@
+@use "../abstracts/mixins" as m;
+@use "./offcanvas";
+
+/*--------------------------------------------------------------
+3. Header
+--------------------------------------------------------------*/
+
+.logged-in.admin-bar {
+	.fixed-top,
+	.offcanvas:not(.offcanvas-bottom),
+	.modal {
+		top: 46px;
+
+		@include m.media-breakpoint-up(md) {
+			top: 32px;
+		}
+	}
+
+	.dropdown-search {
+		top: 10rem !important;
+
+		@include m.media-breakpoint-up(md) {
+			top: 86px !important;
+		}
+	}
+
+	#wpadminbar {
+		position: fixed;
+	}
+}
+
+#site-header {
+	background-color: var(--bs-light-blue);
+	color: var(--bs-primary);
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-primary);
+		color: white;
+	}
+}
+
+#logo-container {
+	background-color: var(--bs-primary);
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-light-blue);
+	}
+}
+
+.header-diamond {
+	top: -99px;
+	right: -66px;
+	z-index: -1;
+	width: 140px;
+	height: 140px;
+	margin: 80px auto;
+	border: 20px solid var(--bs-light-blue);
+	outline: 3px solid var(--bs-primary);
+	transform: rotate(-45deg);
+	background-color: var(--bs-primary);
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-light-blue);
+		border-color: var(--bs-primary);
+		outline-color: var(--bs-light-blue);
+	}
+
+	&__bg {
+		background-color: var(--bs-primary);
+
+		@include m.color-mode(dark) {
+			background-color: var(--bs-light-blue);
+		}
+	}
+}
+
+.logo {
+	height: 100px;
+
+	@include m.color-mode(dark) {
+		filter: invert(1);
+	}
+}
+
+#secondary-header {
+	background-color: white;
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-dark);
+	}
+}

@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as m;
+
+.sentences-list {
+	columns: 2;
+	background-color: var(--bs-grey-light);
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-dark);
+	}
+
+	&__item {
+		button {
+			color: var(--bs-primary);
+
+			@include m.color-mode(dark) {
+				color: var(--bs-light);
+			}
+		}
+
+		&:nth-child(even) {
+			background-color: #d3d3d3;
+
+			@include m.color-mode(dark) {
+				background-color: #4b4b4b;
+			}
+		}
+	}
+
+	.sentenceBold {
+		font-weight: bold;
+		letter-spacing: 0.1ch;
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "choctaw-language",
+	"version": "1.0.0",
+	"description": "Custom WP theme for CNO sites",
+	"prettier": "@wordpress/prettier-config",
+	"browserslist": [
+		"extends @wordpress/browserslist-config",
+		"ie 11"
+	],
+	"scripts": {
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start"
+	},
+	"author": "Choctaw Nation of Oklahoma",
+	"license": "GPL-2.0-or-later",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.7.2",
+		"bootstrap": "^5.3.3",
+		"js-cookie": "^3.0.5"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.12.0",
+		"webpack-remove-empty-scripts": "^1.0.4"
+	}
+}

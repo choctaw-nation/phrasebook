@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as m;
+
+.card {
+	background-color: white;
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-dark);
+	}
+}
+
+.btn-audio {
+	i {
+		color: var(--bs-primary);
+		transition: color var(--transition--standard);
+
+		@include m.color-mode(dark) {
+			color: var(--bs-light);
+		}
+	}
+
+	&:focus,
+	&:hover {
+		i {
+			color: var(--bs-light-blue);
+		}
+	}
+}

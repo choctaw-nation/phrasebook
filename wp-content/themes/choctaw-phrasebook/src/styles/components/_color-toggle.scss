@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as m;
+
+.color-mode {
+	&__switch {
+		font-size: 2.5rem !important;
+	}
+	&__title {
+		color: var(--bs-primary);
+		font-weight: 500;
+		font-size: 20px;
+		@include m.color-mode(dark) {
+			color: var(--bs-light);
+		}
+	}
+}
+.dark-mode-switch.form-check.form-switch {
+	padding-left: 2.75em;
+}
+.form-switch {
+	.form-check-input {
+		width: 80px;
+		height: 40px;
+	}
+}

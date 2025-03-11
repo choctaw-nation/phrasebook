@@ -1,0 +1,59 @@
+@use "../abstracts/mixins" as m;
+
+.hamburger {
+	--size: 5.5rem;
+	height: var(--size);
+	width: var(--size);
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: var(--bs-primary);
+
+		.hamburger__line {
+			border-color: white;
+
+			@include m.color-mode(dark) {
+				border-color: var(--bs-light-blue);
+			}
+		}
+	}
+
+	&__line {
+		transition: border-color var(--transition--standard);
+		border-style: solid;
+		border-color: var(--bs-primary);
+
+		@include m.color-mode(dark) {
+			border-color: var(--bs-light);
+		}
+	}
+}
+
+.offcanvas {
+	background-color: var(--bs-light-blue);
+
+	@include m.color-mode(dark) {
+		background-color: var(--bs-dark);
+	}
+
+	.nav-link {
+		color: var(--bs-dark);
+		border-bottom: 2px solid transparent;
+		transition: border var(--transition--standard);
+
+		@include m.color-mode(dark) {
+			color: var(--bs-light);
+		}
+
+		&:hover,
+		&:focus,
+		&.active {
+			border-color: var(--bs-dark);
+
+			@include m.color-mode(dark) {
+				border-color: var(--bs-light);
+			}
+		}
+	}
+}

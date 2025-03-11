@@ -1,0 +1,155 @@
+@use "../abstracts/variables" as v;
+
+// Required
+@import "bootstrap/scss/functions";
+
+/**
+* Colors
+*/
+$primary: v.$color-primary;
+$dark: #212529;
+$body-bg: v.$color-grey--light;
+
+// DARK MODE
+$body-bg-dark: #181b1e;
+$headings-color-dark: white;
+$body-color-dark: white;
+
+// ==========================
+
+/**
+* Typography
+*/
+$font-family-sans-serif: "Gill Sans Nova", "Helvetica Neue", "Noto Sans",
+	"Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	"Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:
+	Monaspace Neon,
+	"Courier New",
+	monospace;
+
+$font-size-root: 62.5%; // Assuming browser is set to 16px, this will make 1rem = 10px
+$font-size-base: 1.6rem; // Sets the base font size to 16px
+
+// LINKS
+$link-decoration: none;
+$link-color: v.$color-primary--light;
+$link-hover-color: rgba(v.$color-primary--light, 0.8);
+
+// HEADINGS
+$headings-font-family: v.$font-headings;
+$headings-font-weight: 600;
+$headings-color: #212529;
+
+/**
+* Minor Second Type Scale
+* @see https://typescale.com/
+*/
+
+$h1-font-size: $font-size-base * 2.986;
+$h2-font-size: $font-size-base * 2.488;
+$h3-font-size: $font-size-base * 2.074;
+$h4-font-size: $font-size-base * 1.728;
+$h5-font-size: $font-size-base * 1.44;
+$h6-font-size: $font-size-base * 1.2;
+
+$btn-transition: all v.$transition--standard;
+
+// ==========================
+
+/**
+* Spacing
+*/
+$grid-gutter-width: 2.4rem; // 24px
+$spacer: 1.6rem; // 16px
+
+// ============================
+
+/*
+* Forms / Toggle
+*/
+$form-check-input-border: 2px solid v.$color-primary;
+$form-check-input-bg: v.$color-primary;
+$form-switch-color: white;
+$form-switch-bg-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' version='1.1' id='svg134' sodipodi:docname='Download-1.svg' inkscape:version='1.2 (dc2aeda, 2022-05-15)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs138' /%3E%3Csodipodi:namedview id='namedview136' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' showgrid='false' inkscape:zoom='63.09804' inkscape:cx='6.1253884' inkscape:cy='6.1729334' inkscape:window-width='1364' inkscape:window-height='947' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg134' /%3E%3Cpath id='circle132' d='M 1.0664062 -2.7773438 C 1.0393031 -2.7748531 1.0130482 -2.7652069 0.98828125 -2.7480469 L 0 -2.0546875 L -0.99804688 -2.7382812 C -1.0970589 -2.8068822 -1.2324222 -2.7512316 -1.2539062 -2.6328125 L -1.4589844 -1.4511719 L -2.6425781 -1.2382812 C -2.7611575 -1.2176953 -2.8167591 -1.0790675 -2.7480469 -0.99023438 L -2.0625 0.00390625 L -2.7480469 0.99023438 C -2.7815945 1.0384983 -2.7844743 1.0960512 -2.765625 1.1445312 C -2.7648521 1.1465191 -2.7645199 1.1484336 -2.7636719 1.1503906 C -2.7428405 1.1984625 -2.7009206 1.237499 -2.6425781 1.2480469 L -1.4589844 1.4609375 L -1.2460938 2.6425781 C -1.2353978 2.7017822 -1.1957751 2.7452394 -1.1464844 2.765625 C -1.0971936 2.7860106 -1.0378151 2.7823664 -0.98828125 2.7480469 L 0 2.0644531 L 0.98828125 2.7480469 C 1.0378012 2.7823568 1.0952346 2.7860042 1.1445312 2.765625 C 1.1938279 2.7452458 1.2334541 2.701777 1.2441406 2.6425781 L 1.4589844 1.4609375 L 2.640625 1.2480469 C 2.6991636 1.2377781 2.7428095 1.1985854 2.7636719 1.1503906 A 3 3 0 0 0 2.765625 1.1445312 C 2.7845046 1.0959264 2.7814228 1.0383663 2.7480469 0.99023438 L 2.0625 -0.00390625 L 2.7480469 -0.99023438 C 2.8167591 -1.0890883 2.7591952 -1.226596 2.640625 -1.2480469 L 1.4589844 -1.4609375 L 1.2441406 -2.6425781 C 1.228097 -2.7313842 1.1477157 -2.7848158 1.0664062 -2.7773438 z M 0 -1.3710938 C 0.75733412 -1.3710938 1.3789063 -0.75225827 1.3789062 0.00390625 C 1.3789062 0.76982198 0.76721496 1.3808594 0 1.3808594 C -0.76709458 1.3808594 -1.3789062 0.75996335 -1.3789062 0.00390625 C -1.3789062 -0.76190019 -0.75732485 -1.3710938 0 -1.3710938 z M 0 -1.0449219 C -0.57534871 -1.0449219 -1.03125 -0.57830445 -1.03125 -0.013671875 C -1.03125 0.5509607 -0.58489619 1.0351562 0 1.0351562 C 0.58490544 1.0351562 1.03125 0.56853884 1.03125 0.00390625 C 1.03125 -0.56072633 0.57513573 -1.0449219 0 -1.0449219 z ' style='fill:%23ffffff;fill-opacity:1' /%3E%3C/svg%3E");
+
+$form-switch-focus-bg-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' version='1.1' id='svg134' sodipodi:docname='Download-1.svg' inkscape:version='1.2 (dc2aeda, 2022-05-15)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs138' /%3E%3Csodipodi:namedview id='namedview136' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' showgrid='false' inkscape:zoom='63.09804' inkscape:cx='6.1253884' inkscape:cy='6.1729334' inkscape:window-width='1364' inkscape:window-height='947' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg134' /%3E%3Cpath id='circle132' d='M 1.0664062 -2.7773438 C 1.0393031 -2.7748531 1.0130482 -2.7652069 0.98828125 -2.7480469 L 0 -2.0546875 L -0.99804688 -2.7382812 C -1.0970589 -2.8068822 -1.2324222 -2.7512316 -1.2539062 -2.6328125 L -1.4589844 -1.4511719 L -2.6425781 -1.2382812 C -2.7611575 -1.2176953 -2.8167591 -1.0790675 -2.7480469 -0.99023438 L -2.0625 0.00390625 L -2.7480469 0.99023438 C -2.7815945 1.0384983 -2.7844743 1.0960512 -2.765625 1.1445312 C -2.7648521 1.1465191 -2.7645199 1.1484336 -2.7636719 1.1503906 C -2.7428405 1.1984625 -2.7009206 1.237499 -2.6425781 1.2480469 L -1.4589844 1.4609375 L -1.2460938 2.6425781 C -1.2353978 2.7017822 -1.1957751 2.7452394 -1.1464844 2.765625 C -1.0971936 2.7860106 -1.0378151 2.7823664 -0.98828125 2.7480469 L 0 2.0644531 L 0.98828125 2.7480469 C 1.0378012 2.7823568 1.0952346 2.7860042 1.1445312 2.765625 C 1.1938279 2.7452458 1.2334541 2.701777 1.2441406 2.6425781 L 1.4589844 1.4609375 L 2.640625 1.2480469 C 2.6991636 1.2377781 2.7428095 1.1985854 2.7636719 1.1503906 A 3 3 0 0 0 2.765625 1.1445312 C 2.7845046 1.0959264 2.7814228 1.0383663 2.7480469 0.99023438 L 2.0625 -0.00390625 L 2.7480469 -0.99023438 C 2.8167591 -1.0890883 2.7591952 -1.226596 2.640625 -1.2480469 L 1.4589844 -1.4609375 L 1.2441406 -2.6425781 C 1.228097 -2.7313842 1.1477157 -2.7848158 1.0664062 -2.7773438 z M 0 -1.3710938 C 0.75733412 -1.3710938 1.3789063 -0.75225827 1.3789062 0.00390625 C 1.3789062 0.76982198 0.76721496 1.3808594 0 1.3808594 C -0.76709458 1.3808594 -1.3789062 0.75996335 -1.3789062 0.00390625 C -1.3789062 -0.76190019 -0.75732485 -1.3710938 0 -1.3710938 z M 0 -1.0449219 C -0.57534871 -1.0449219 -1.03125 -0.57830445 -1.03125 -0.013671875 C -1.03125 0.5509607 -0.58489619 1.0351562 0 1.0351562 C 0.58490544 1.0351562 1.03125 0.56853884 1.03125 0.00390625 C 1.03125 -0.56072633 0.57513573 -1.0449219 0 -1.0449219 z ' style='fill:%23ffffff;fill-opacity:1' /%3E%3C/svg%3E");
+
+$form-switch-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' version='1.1' id='svg134' sodipodi:docname='moon-1.svg' xml:space='preserve' inkscape:version='1.2 (dc2aeda, 2022-05-15)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs138' /%3E%3Csodipodi:namedview id='namedview136' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' showgrid='false' inkscape:zoom='20.85965' inkscape:cx='4.1707315' inkscape:cy='7.2148861' inkscape:window-width='1379' inkscape:window-height='947' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg134' /%3E%3Cpath id='circle132' d='M -0.001953125 -3 A 3 3 0 0 0 -0.39648438 -2.9707031 A 3 3 0 0 0 -0.41796875 -2.96875 C -0.43086999 -2.9670831 -0.44075212 -2.9646453 -0.453125 -2.9628906 A 3 3 0 0 0 -0.58203125 -2.9355469 C -0.58383109 -2.9346542 -0.58615066 -2.9345539 -0.58789062 -2.9335938 C -0.67808646 -2.8838208 -0.6891089 -2.7458206 -0.58984375 -2.6894531 C 0.14648154 -2.2700695 0.59960938 -1.4929115 0.59960938 -0.64648438 C 0.59960938 0.82271116 -0.73512458 1.9393421 -2.1894531 1.6621094 C -2.317502 1.6379394 -2.4068527 1.786538 -2.3242188 1.8886719 C -2.2893053 1.931822 -2.2538978 1.97462 -2.2167969 2.015625 A 3 3 0 0 0 -2.0117188 2.21875 C -2.0015586 2.2280081 -1.9927034 2.2389335 -1.9824219 2.2480469 C -1.9582181 2.2695007 -1.9330651 2.2899054 -1.9082031 2.3105469 A 3 3 0 0 0 -1.6425781 2.5078125 C -1.630481 2.5157832 -1.6176813 2.5234554 -1.6054688 2.53125 A 3 3 0 0 0 -1.2617188 2.7207031 A 3 3 0 0 0 -1.2285156 2.734375 A 3 3 0 0 0 -0.87890625 2.8671875 C -0.86390651 2.8718017 -0.84907499 2.8764773 -0.83398438 2.8808594 A 3 3 0 0 0 -0.82226562 2.8847656 A 3 3 0 0 0 -0.43554688 2.9667969 A 3 3 0 0 0 -0.42773438 2.96875 C -0.42518508 2.9691175 -0.42247298 2.968389 -0.41992188 2.96875 A 3 3 0 0 0 -0.001953125 3 C -0.00064231537 3.0000017 0.00064199664 3 0.001953125 3 A 3 3 0 0 0 0.42773438 2.96875 A 3 3 0 0 0 0.84570312 2.8789062 A 3 3 0 0 0 1.2460938 2.7285156 A 3 3 0 0 0 1.6210938 2.5234375 A 3 3 0 0 0 1.9589844 2.2734375 C 1.9610908 2.2716193 1.9627425 2.2694021 1.9648438 2.2675781 A 3 3 0 0 0 1.9707031 2.2617188 A 3 3 0 0 0 2.2636719 1.96875 C 2.2648896 1.9673506 2.266363 1.9662454 2.2675781 1.9648438 A 3 3 0 0 0 2.2714844 1.9609375 A 3 3 0 0 0 2.5234375 1.6210938 A 3 3 0 0 0 2.7285156 1.2460938 A 3 3 0 0 0 2.8769531 0.8515625 C 2.8775412 0.84957277 2.8783222 0.84769457 2.8789062 0.84570312 A 3 3 0 0 0 2.8808594 0.83789062 A 3 3 0 0 0 2.96875 0.4296875 C 2.9688411 0.42905187 2.9686593 0.42837014 2.96875 0.42773438 A 3 3 0 0 0 2.96875 0.42578125 A 3 3 0 0 0 3 0 C 3 -0.049191781 2.9984316 -0.097875819 2.9960938 -0.14648438 A 3 3 0 0 0 2.9960938 -0.15429688 C 2.9937024 -0.20149904 2.9908741 -0.24832299 2.9863281 -0.29492188 A 3 3 0 0 0 2.984375 -0.30664062 C 2.9819779 -0.33025653 2.9775504 -0.35350312 2.9746094 -0.37695312 A 3 3 0 0 0 2.9648438 -0.45703125 A 3 3 0 0 0 2.9101562 -0.72851562 A 3 3 0 0 0 2.8710938 -0.87109375 A 3 3 0 0 0 2.7714844 -1.1484375 A 3 3 0 0 0 2.7636719 -1.1679688 C 2.7472136 -1.206894 2.7309233 -1.2451398 2.7128906 -1.2832031 A 3 3 0 0 0 2.7050781 -1.3007812 C 2.6865549 -1.339236 2.666577 -1.3765425 2.6464844 -1.4140625 A 3 3 0 0 0 2.6386719 -1.4296875 A 3 3 0 0 0 2.4179688 -1.7753906 C 2.4151879 -1.7791722 2.4129543 -1.7833413 2.4101562 -1.7871094 A 3 3 0 0 0 2.4042969 -1.7949219 C 2.3769122 -1.8315505 2.3473503 -1.8670378 2.3183594 -1.9023438 A 3 3 0 0 0 2.3144531 -1.9082031 C 2.2844827 -1.9445298 2.2542723 -1.9807653 2.2226562 -2.015625 A 3 3 0 0 0 2.2207031 -2.0175781 C 2.1555576 -2.0892758 2.0873531 -2.1575621 2.015625 -2.2226562 A 3 3 0 0 0 1.9082031 -2.3144531 C 1.9064064 -2.3159364 1.904144 -2.3168802 1.9023438 -2.3183594 A 3 3 0 0 0 1.7949219 -2.4042969 C 1.7923165 -2.406246 1.7897213 -2.4082154 1.7871094 -2.4101562 A 3 3 0 0 0 1.7753906 -2.4179688 A 3 3 0 0 0 1.4140625 -2.6464844 A 3 3 0 0 0 1.3007812 -2.7050781 C 1.2949939 -2.7078679 1.289011 -2.710137 1.2832031 -2.7128906 A 3 3 0 0 0 1.1679688 -2.7636719 C 1.1614868 -2.7664148 1.1549426 -2.7687859 1.1484375 -2.7714844 A 3 3 0 0 0 0.87109375 -2.8710938 A 3 3 0 0 0 0.43945312 -2.9667969 A 3 3 0 0 0 0.328125 -2.9824219 C 0.31709094 -2.9836162 0.30599133 -2.9852541 0.29492188 -2.9863281 A 3 3 0 0 0 0.15625 -2.9960938 C 0.15302108 -2.9962576 0.14971597 -2.9959402 0.14648438 -2.9960938 A 3 3 0 0 0 0 -3 A 3 3 0 0 0 -0.001953125 -3 z ' style='fill:%23ffffff' /%3E%3C/svg%3E");
+
+$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' version='1.1' id='svg134' sodipodi:docname='moon-1.svg' xml:space='preserve' inkscape:version='1.2 (dc2aeda, 2022-05-15)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cdefs id='defs138' /%3E%3Csodipodi:namedview id='namedview136' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:showpageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:deskcolor='%23d1d1d1' showgrid='false' inkscape:zoom='20.85965' inkscape:cx='4.1707315' inkscape:cy='7.2148861' inkscape:window-width='1379' inkscape:window-height='947' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg134' /%3E%3Cpath id='circle132' d='M -0.001953125 -3 A 3 3 0 0 0 -0.39648438 -2.9707031 A 3 3 0 0 0 -0.41796875 -2.96875 C -0.43086999 -2.9670831 -0.44075212 -2.9646453 -0.453125 -2.9628906 A 3 3 0 0 0 -0.58203125 -2.9355469 C -0.58383109 -2.9346542 -0.58615066 -2.9345539 -0.58789062 -2.9335938 C -0.67808646 -2.8838208 -0.6891089 -2.7458206 -0.58984375 -2.6894531 C 0.14648154 -2.2700695 0.59960938 -1.4929115 0.59960938 -0.64648438 C 0.59960938 0.82271116 -0.73512458 1.9393421 -2.1894531 1.6621094 C -2.317502 1.6379394 -2.4068527 1.786538 -2.3242188 1.8886719 C -2.2893053 1.931822 -2.2538978 1.97462 -2.2167969 2.015625 A 3 3 0 0 0 -2.0117188 2.21875 C -2.0015586 2.2280081 -1.9927034 2.2389335 -1.9824219 2.2480469 C -1.9582181 2.2695007 -1.9330651 2.2899054 -1.9082031 2.3105469 A 3 3 0 0 0 -1.6425781 2.5078125 C -1.630481 2.5157832 -1.6176813 2.5234554 -1.6054688 2.53125 A 3 3 0 0 0 -1.2617188 2.7207031 A 3 3 0 0 0 -1.2285156 2.734375 A 3 3 0 0 0 -0.87890625 2.8671875 C -0.86390651 2.8718017 -0.84907499 2.8764773 -0.83398438 2.8808594 A 3 3 0 0 0 -0.82226562 2.8847656 A 3 3 0 0 0 -0.43554688 2.9667969 A 3 3 0 0 0 -0.42773438 2.96875 C -0.42518508 2.9691175 -0.42247298 2.968389 -0.41992188 2.96875 A 3 3 0 0 0 -0.001953125 3 C -0.00064231537 3.0000017 0.00064199664 3 0.001953125 3 A 3 3 0 0 0 0.42773438 2.96875 A 3 3 0 0 0 0.84570312 2.8789062 A 3 3 0 0 0 1.2460938 2.7285156 A 3 3 0 0 0 1.6210938 2.5234375 A 3 3 0 0 0 1.9589844 2.2734375 C 1.9610908 2.2716193 1.9627425 2.2694021 1.9648438 2.2675781 A 3 3 0 0 0 1.9707031 2.2617188 A 3 3 0 0 0 2.2636719 1.96875 C 2.2648896 1.9673506 2.266363 1.9662454 2.2675781 1.9648438 A 3 3 0 0 0 2.2714844 1.9609375 A 3 3 0 0 0 2.5234375 1.6210938 A 3 3 0 0 0 2.7285156 1.2460938 A 3 3 0 0 0 2.8769531 0.8515625 C 2.8775412 0.84957277 2.8783222 0.84769457 2.8789062 0.84570312 A 3 3 0 0 0 2.8808594 0.83789062 A 3 3 0 0 0 2.96875 0.4296875 C 2.9688411 0.42905187 2.9686593 0.42837014 2.96875 0.42773438 A 3 3 0 0 0 2.96875 0.42578125 A 3 3 0 0 0 3 0 C 3 -0.049191781 2.9984316 -0.097875819 2.9960938 -0.14648438 A 3 3 0 0 0 2.9960938 -0.15429688 C 2.9937024 -0.20149904 2.9908741 -0.24832299 2.9863281 -0.29492188 A 3 3 0 0 0 2.984375 -0.30664062 C 2.9819779 -0.33025653 2.9775504 -0.35350312 2.9746094 -0.37695312 A 3 3 0 0 0 2.9648438 -0.45703125 A 3 3 0 0 0 2.9101562 -0.72851562 A 3 3 0 0 0 2.8710938 -0.87109375 A 3 3 0 0 0 2.7714844 -1.1484375 A 3 3 0 0 0 2.7636719 -1.1679688 C 2.7472136 -1.206894 2.7309233 -1.2451398 2.7128906 -1.2832031 A 3 3 0 0 0 2.7050781 -1.3007812 C 2.6865549 -1.339236 2.666577 -1.3765425 2.6464844 -1.4140625 A 3 3 0 0 0 2.6386719 -1.4296875 A 3 3 0 0 0 2.4179688 -1.7753906 C 2.4151879 -1.7791722 2.4129543 -1.7833413 2.4101562 -1.7871094 A 3 3 0 0 0 2.4042969 -1.7949219 C 2.3769122 -1.8315505 2.3473503 -1.8670378 2.3183594 -1.9023438 A 3 3 0 0 0 2.3144531 -1.9082031 C 2.2844827 -1.9445298 2.2542723 -1.9807653 2.2226562 -2.015625 A 3 3 0 0 0 2.2207031 -2.0175781 C 2.1555576 -2.0892758 2.0873531 -2.1575621 2.015625 -2.2226562 A 3 3 0 0 0 1.9082031 -2.3144531 C 1.9064064 -2.3159364 1.904144 -2.3168802 1.9023438 -2.3183594 A 3 3 0 0 0 1.7949219 -2.4042969 C 1.7923165 -2.406246 1.7897213 -2.4082154 1.7871094 -2.4101562 A 3 3 0 0 0 1.7753906 -2.4179688 A 3 3 0 0 0 1.4140625 -2.6464844 A 3 3 0 0 0 1.3007812 -2.7050781 C 1.2949939 -2.7078679 1.289011 -2.710137 1.2832031 -2.7128906 A 3 3 0 0 0 1.1679688 -2.7636719 C 1.1614868 -2.7664148 1.1549426 -2.7687859 1.1484375 -2.7714844 A 3 3 0 0 0 0.87109375 -2.8710938 A 3 3 0 0 0 0.43945312 -2.9667969 A 3 3 0 0 0 0.328125 -2.9824219 C 0.31709094 -2.9836162 0.30599133 -2.9852541 0.29492188 -2.9863281 A 3 3 0 0 0 0.15625 -2.9960938 C 0.15302108 -2.9962576 0.14971597 -2.9959402 0.14648438 -2.9960938 A 3 3 0 0 0 0 -3 A 3 3 0 0 0 -0.001953125 -3 z ' style='fill:%23ffffff' /%3E%3C/svg%3E");
+
+// ===========================
+/**
+* Options
+*/
+
+$enable-shadows: false;
+
+// ===========================
+/**
+* Navbar
+*/
+
+$navbar-light-icon-color: $primary;
+$navbar-dark-icon-color: white;
+
+// ===========================
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// Map Overrides Here (Optional)
+$theme-colors: map-merge(
+	$theme-colors,
+	(
+		"light-blue": v.$color-primary--light,
+		"light-grey": v.$color-grey--light,
+	)
+);
+
+// Required Bootstrap Modules
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+// Useful Bootstrap Utilities (Optional)
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/dropdown";
+
+// Optional Bootstrap Modules (w/ Dependencies)
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";

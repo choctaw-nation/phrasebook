@@ -1,0 +1,98 @@
+@use "../abstracts/mixins" as m;
+
+.searchandfilter ul {
+	padding: 0;
+
+	// This field must exist so Search & Filter handles URLs properly
+	// It should not be visible in the markup, ever.
+	.sf-field-taxonomy-first_letter {
+		display: none;
+	}
+
+	.sf-field-reset {
+		display: inline-block;
+		padding: 0px;
+	}
+
+	.sf-field-search {
+		display: inline-block;
+
+		&::before {
+			--size: 3rem;
+			content: "";
+			position: absolute;
+			width: var(--size);
+			height: var(--size);
+			background-image: url(/wp-content/uploads/2024/09/search-grey.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0.5;
+			margin-top: 3px;
+			margin-left: 14px;
+			z-index: 100;
+		}
+	}
+
+	.sf-add-special-character {
+		padding-left: 10px !important;
+	}
+
+	.sf-input-text {
+		padding-right: 27px;
+		padding-left: 40px;
+		font-family: gill-sans-nova, sans-serif;
+		font-weight: 500;
+		font-size: 20px;
+		border-radius: 10px;
+		border-color: rgba(0, 0, 0, 0.25);
+		border-style: solid;
+		border-width: thin;
+		width: 100%;
+		margin-left: 10px;
+	}
+}
+
+%add-letter-button {
+	background-color: var(--bs-primary) !important;
+	color: white;
+
+	&:focus {
+		background-color: transparent !important;
+		color: var(--bs-primary);
+
+		@include m.color-mode(dark) {
+			color: white;
+		}
+	}
+}
+.add-letter-button {
+	@extend %add-letter-button;
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited,
+	&:link {
+		@extend %add-letter-button;
+		background-color: var(--bs-light-blue) !important;
+	}
+	&:not(.search-filter-reset) {
+		width: 3rem;
+	}
+
+	&__info {
+		@extend %add-letter-button;
+	}
+}
+.rounded-circle {
+	background-color: var(--bs-primary);
+	color: white;;
+	height: 32px;
+	width: 32px;
+	&:hover,
+	&:focus,
+	&:active,
+	{
+		background-color: var(--bs-light-blue);
+		color: white;
+	}
+}

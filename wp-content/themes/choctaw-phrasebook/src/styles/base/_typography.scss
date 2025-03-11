@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as v;
+
+p,
+li,
+.text-content {
+	text-wrap: pretty;
+}
+
+.font-gil {
+	font-family: var(--font-body);
+}
+
+.font-pill {
+	font-family: var(--font-headings);
+}
+
+// HEADINGS
+
+%headings {
+	text-wrap: balance;
+}
+
+.h1,
+h1 {
+	@extend %headings;
+}
+
+.h2,
+h2 {
+	@extend %headings;
+}
+
+.h3,
+h3 {
+	@extend %headings;
+}
+
+.h4,
+h4 {
+	@extend %headings;
+}
+
+.h5,
+h5 {
+	@extend %headings;
+}
+
+.h6,
+h6 {
+	@extend %headings;
+}

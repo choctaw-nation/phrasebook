@@ -1,0 +1,95 @@
+@use "./base/base";
+@use "./base/typography";
+
+// Components
+@use "./components/header";
+@use "./components/first-letter-diamond";
+@use "./components/alphabet-menu";
+@use "./components/search-and-filter";
+@use "./components/color-toggle";
+@use "./components/card";
+
+// Pages
+@use "./pages/alphabet";
+
+.sf-field-taxonomy-phrases-category {
+	display: none !important;
+}
+.btn-secondary {
+	--bs-btn-bg: var(--color-primary);
+	--bs-btn-border-color: var(--color-primary);
+	--bs-btn-hover-bg: var(--bs-light-blue);
+	--bs-btn-hover-color: black;
+	--bs-btn-active-color: black;
+	--bs-btn-focus-color: black;
+	--bs-btn-hover-border-color: var(--bs-light-blue);
+	--bs-btn-active-bg: var(--bs-light-blue);
+	--bs-btn-active-border-color: var(--bs-light-blue);
+	--bs-btn-disabled-bg: var(--color-primary);
+	--bs-btn-disabled-border-color: var(--color-primary);
+}
+.dropdown-menu-dark {
+	--bs-dropdown-color: white;
+	--bs-dropdown-bg: var(--color-primary);
+	--bs-dropdown-border-color: var(--bs-border-color-translucent);
+	--bs-dropdown-box-shadow: ;
+	--bs-dropdown-link-color: white;
+	--bs-dropdown-link-hover-color: #fff;
+	--bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+	--bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
+	--bs-dropdown-link-active-color: #fff;
+	--bs-dropdown-link-active-bg: var(--bs-light-blue);
+	--bs-dropdown-link-disabled-color: var(--bs-light-blue);
+	--bs-dropdown-header-color: var(--bs-light-blue);
+}
+[data-bs-theme="dark"] {
+	.btn-secondary {
+		--bs-btn-bg: var(--bs-light-blue);
+		--bs-btn-border-color: var(--bs-light-blue);
+		--bs-btn-color: black;
+		--bs-btn-hover-color: white;
+		--bs-btn-active-color: white;
+		--bs-btn-focus-color: white;
+		--bs-btn-hover-bg: var(--color-primary);
+		--bs-btn-hover-border-color: var(--color-primary);
+		--bs-btn-active-bg: var(--color-primary);
+		--bs-btn-active-border-color: var(--bs-light-blue);
+
+		--bs-btn-disabled-bg: var(--bs-light-blue);
+		--bs-btn-disabled-border-color: var(--bs-light-blue);
+	}
+
+}
+.dropdown-menu {
+	max-height: 200px;
+	overflow-y: scroll;
+}
+.btn {
+	font-size: 16px;
+}
+.button-A {
+	margin-left: 125px !important;
+}
+.sf-field-search {
+	padding-bottom: 0px !important;
+}
+.add-letter-button {
+	font-family: gill-sans-nova, sans-serif;
+	font-weight: 500;
+	font-size: 20px !important;
+	min-height: 39px;
+}
+.search-filter-reset {
+	border-radius: 10px !important;
+	margin-left: 20px !important;
+	padding: 5px !important;
+	margin-top: 0;
+}
+
+.menu-item {
+	font-size: 18px;
+}
+.copyright {
+	color: #000;
+	font-size: 16px;
+}

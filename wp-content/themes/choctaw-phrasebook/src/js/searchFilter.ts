@@ -65,7 +65,6 @@ private addSearchFormButtons() {
 		},
 	];
 	if (searchField) {
-		console.error('Search field found');
 		let buttonCount = 0;
 		if (!searchField.querySelector('.sf-field-reset')) {
 			searchField.insertAdjacentHTML(

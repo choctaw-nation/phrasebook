@@ -4,6 +4,10 @@ A dictionary app for the Choctaw Language.
 
 # Changelog
 
+## v1.0.3
+
+-   removing console error
+
 ## v1.0.2
 
 -   Fixed: Fonts now load properly on Safari
